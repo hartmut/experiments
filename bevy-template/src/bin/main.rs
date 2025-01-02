@@ -1,6 +1,7 @@
 use bevy::prelude::*;
 use bevy::remote::http::RemoteHttpPlugin;
 use bevy::remote::RemotePlugin;
+use bevy_template::core::plugins::*;
 
 fn main() {
     let height: f32 = 700.0;
@@ -18,5 +19,6 @@ fn main() {
             }),
             ..default()
         }))
+        .add_plugins(startup::StartupPlugin)
         .run();
 }
