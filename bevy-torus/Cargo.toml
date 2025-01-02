@@ -1,0 +1,10 @@
+[package]
+name = "bevy-torus"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[dependencies.bevy]
+version = "0.15" # https://crates.io/crates/bevy
+features = ["dynamic_linking","serialize", "wayland","bevy_remote"]
