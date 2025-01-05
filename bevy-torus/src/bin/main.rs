@@ -2,6 +2,8 @@ use bevy::prelude::*;
 use bevy::remote::http::RemoteHttpPlugin;
 use bevy::remote::RemotePlugin;
 use bevy_torus::core::plugins::*;
+use bevy_panorbit_camera::*;
+// use bevy_editor_pls;
 
 fn main() {
     let height: f32 = 700.0;
@@ -20,5 +22,7 @@ fn main() {
             ..default()
         }))
         .add_plugins(startup::StartupPlugin)
+        .add_plugins(PanOrbitCameraPlugin)
+        // .add_plugins(EditorPlugin::default())
         .run();
 }

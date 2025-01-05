@@ -4,6 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+bevy_editor_pls = "0.10" # https://crates.io/crates/bevy_editor_pls
+bevy_panorbit_camera = "0.21" # https://github.com/Plonq/bevy_panorbit_camera 
 
 [dependencies.bevy]
 version = "0.15" # https://crates.io/crates/bevy
