@@ -3,6 +3,7 @@ use bevy::remote::http::RemoteHttpPlugin;
 use bevy::remote::RemotePlugin;
 use bevy_torus::core::plugins::*;
 use bevy_panorbit_camera::*;
+use bevy_inspector_egui::quick::WorldInspectorPlugin;
 // use bevy_editor_pls;
 
 fn main() {
@@ -23,6 +24,6 @@ fn main() {
         }))
         .add_plugins(startup::StartupPlugin)
         .add_plugins(PanOrbitCameraPlugin)
-        // .add_plugins(EditorPlugin::default())
+        .add_plugins(WorldInspectorPlugin::new())
         .run();
 }

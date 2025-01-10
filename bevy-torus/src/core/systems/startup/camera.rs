@@ -12,7 +12,7 @@ pub fn setup_camera(
     // X
     commands.spawn((
         Mesh3d(meshes.add(Cylinder::new(0.5, 50.0))),
-        MeshMaterial3d(materials.add(Color::srgb_u8(0, 255, 0))),
+        MeshMaterial3d(materials.add(Color::srgb(0.1, 1.0, 0.1))),
         Transform::from_xyz(25.0, 0.0, 0.0),
     ));
     // Y
@@ -37,9 +37,10 @@ pub fn setup_camera(
     commands.spawn((
         PointLight {
             shadows_enabled: true,
+            intensity: 4000.0,
             ..default()
         },
-        Transform::from_xyz(40.0, 40.0, 40.0),
+        Transform::from_xyz(40.0, 40.0, 100.0),
     ));
 
     // commands.spawn((
