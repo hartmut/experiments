@@ -4,7 +4,7 @@ use bevy::remote::RemotePlugin;
 use bevy_torus::core::plugins::*;
 use bevy_panorbit_camera::*;
 use bevy_inspector_egui::quick::WorldInspectorPlugin;
-// use bevy_editor_pls;
+use bevy_torus::core::systems::fly::*;
 
 fn main() {
     let height: f32 = 700.0;
@@ -25,5 +25,6 @@ fn main() {
         .add_plugins(startup::StartupPlugin)
         .add_plugins(PanOrbitCameraPlugin)
         .add_plugins(WorldInspectorPlugin::new())
+        .add_systems(Update, flying_spheres)
         .run();
 }
