@@ -1,5 +1,5 @@
 [package]
-name = "bevy-torus"
+name = "bevy-3dtest"
 version = "0.1.0"
 edition = "2021"
 
